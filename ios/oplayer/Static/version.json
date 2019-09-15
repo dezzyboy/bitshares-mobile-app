@@ -7,8 +7,7 @@
   "faucetURL": "",
   "wssNodes": {
     "default": [
-      "wss://btsapi.magicw.net/ws",
-      "wss://api.bts.mobi/ws",
+      "wss://node-euro-west.x4trade.org:9090"
     ],
     "cn": [],
     "en": [],

@@ -146,7 +146,7 @@ typedef enum EBitsharesOperations
 } EBitsharesOperations;
 
 //  BTS公钥地址前缀
-#define BTS_ADDRESS_PREFIX                  "BTS"
+#define BTS_ADDRESS_PREFIX                  "X4T"
 
 //  BTS公钥地址前缀长度 = strlen(BTS_ADDRESS_PREFIX)
 //#define BTS_ADDRESS_PREFIX_LENGTH           3
@@ -155,10 +155,10 @@ typedef enum EBitsharesOperations
 #define BTS_CHAIN_EXPIRE_IN_SECS            15
 
 //  BTS主网公链ID（正式网络）
-#define BTS_NETWORK_CHAIN_ID                "4018d7844c78f6a6c41c6a552b898022310fc5dec06da467ee7905a8dad512c8"
+#define BTS_NETWORK_CHAIN_ID                "56f37215a0f68bf8b5ee6e1c5b78b1c6d06bc78e8a69d67a2b1857d1c7a3dde3"
 
 //  BTS主网核心资产名称（正式网络）
-#define BTS_NETWORK_CORE_ASSET              "BTS"
+#define BTS_NETWORK_CORE_ASSET              "X4T"
 
 //  BTS主网核心资产ID号
 #define BTS_NETWORK_CORE_ASSET_ID           @"1.3.0"
@@ -177,7 +177,7 @@ typedef enum EBitsharesOperations
 #define BTS_GRAPHENE_PROXY_TO_SELF          @"1.2.5"
 
 //  黑名单意见账号：btspp-team
-#define BTS_GRAPHENE_ACCOUNT_BTSPP_TEAM     @"1.2.1031560"
+#define BTS_GRAPHENE_ACCOUNT_BTSPP_TEAM     @"1.2.15"
 
 //  BTS网络动态全局信息对象ID号
 //  格式：
