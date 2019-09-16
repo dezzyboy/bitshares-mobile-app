@@ -179,7 +179,7 @@
     
     switch (_searchType) {
         case enstAccount:
-            _searchBar.placeholder = NSLocalizedString(@"kSearchPlaceholderAccount", @"请输入有效的 Bitshares 帐号名");
+            _searchBar.placeholder = NSLocalizedString(@"kSearchPlaceholderAccount", @"请输入有效的 X4trade 帐号名");
             break;
         case enstAsset:
             _searchBar.placeholder = NSLocalizedString(@"kSearchPlaceholderAsset", @"点击搜索新资产");
@@ -466,7 +466,7 @@
                 if ([self isSearchMatched:[d objectForKey:sortKey] match:_currSearchText]){
                     for (id market in base_markets) {
                         id base = [market objectForKey:@"base"];
-                        //  REMARK：略过 base 和 quote 相同的交易对：CNY/CNY USD/USD BTS/BTS
+                        //  REMARK：略过 base 和 quote 相同的交易对：CNY/CNY USD/USD X4T/X4T
                         if ([[d objectForKey:@"symbol"] isEqualToString:[base objectForKey:@"symbol"]]){
                             continue;
                         }

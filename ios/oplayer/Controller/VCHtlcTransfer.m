@@ -293,7 +293,7 @@ enum
         return [[balance_item objectForKey:@"amount"] unsignedLongLongValue] != 0;
     })];
     
-    //  如果资产列表为空，则添加默认值。{BTS:0}
+    //  如果资产列表为空，则添加默认值。{X4T:0}
     if ([none_zero_balances count] <= 0){
         id balance_object = @{@"asset_id":chainMgr.grapheneCoreAssetID, @"amount":@0};
         none_zero_balances = @[balance_object];
@@ -584,7 +584,7 @@ enum
     //  === 转账基本参数有效性检测 ===
     //  TODO:fowallet 不足的时候否直接提示显示？？？
     if (![[_fee_item objectForKey:@"sufficient"] boolValue]){
-        [OrgUtils makeToast:NSLocalizedString(@"kTipsTxFeeNotEnough", @"手续费不足，请确保帐号有足额的 BTS/CNY/USD 用于支付网络手续费。")];
+        [OrgUtils makeToast:NSLocalizedString(@"kTipsTxFeeNotEnough", @"手续费不足，请确保帐号有足额的 X4T/CNY/USD 用于支付网络手续费。")];
         return;
     }
     

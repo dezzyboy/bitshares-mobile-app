@@ -83,7 +83,7 @@
     //    supportsOutputMemos = 1;
     //    symbol = "OPEN.EOSDAC";
     //    transactionFee = 0;
-    //    walletName = "BitShares 2.0";
+    //    walletName = "XTtrade 2.0";
     //    walletSymbol = "OPEN.EOSDAC";
     //    walletType = bitshares2;
     //    withdrawalLimit24h = "-1";

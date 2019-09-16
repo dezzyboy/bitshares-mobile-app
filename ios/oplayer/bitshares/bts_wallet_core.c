@@ -505,7 +505,7 @@ void __bts_private_key_to_wif(const unsigned char private_key32[], unsigned char
 }
 
 /**
- *  从公钥结构生成 BTS 地址字符串
+ *  从公钥结构生成 X4T 地址字符串
  */
 void __bts_public_key_to_address(const secp256k1_pubkey* public_key, unsigned char address_output[], size_t* address_output_size,
                                  const char* address_prefix, const size_t address_prefix_size)
@@ -537,7 +537,7 @@ void __bts_public_key_to_address(const secp256k1_pubkey* public_key, unsigned ch
 }
 
 /**
- *  从 32 字节原始私钥生成 BTS 地址字符串
+ *  从 32 字节原始私钥生成 X4T 地址字符串
  */
 bool __bts_gen_address_from_private_key32(const unsigned char private_key32[],
                                           unsigned char address_output[], size_t* address_output_size,

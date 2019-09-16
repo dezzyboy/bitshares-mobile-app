@@ -194,7 +194,7 @@
 "kLoginImportTipsPleaseInputPassword" = "Please input password.";
 "kLoginImportTipsReadWalletFailed" = "Failed to read the wallet file.";
 "kLoginImportTipsInvalidFileOrPassword" = "The wallet file is invalid or the password is incorrect.";
-"kLoginImportTipsNotBTSWallet" = "This wallet is not a Bitshares wallet.";
+"kLoginImportTipsNotBTSWallet" = "This wallet is not a X4trade wallet.";
 "kLoginImportTipsWalletIsEmpty" = "The wallet is empty, please re-select.";
 "kLoginImportTipsWalletHaveManyAccounts" = "The wallet contains multiple accounts and does not support import.";
 "kLoginImportTipsWalletNoPrivateKey" = "The wallet does not contain a private key, please re-select.";
@@ -223,8 +223,8 @@
 "kLoginCellWalletPassword" = "W-pwd";
 "kLoginCellActivePrivateKey" = "key ";
 "kLoginCellConfirmPassword" = "Confirm ";
-"kLoginRegTipsAccountMode" = "Tip: The password format can be viewed by clicking on the question mark. \nNote: Bitshares is a decentralized blockchain application. Once the password is lost or forgotten, it will not be retrieved. Please keep it in a safe place.";
-"kLoginRegTipsWalletMode" = "Tip: The password format can be viewed by clicking on the question mark. \nNote: Bitshares is a decentralized blockchain application. If the wallet file or password is lost or forgotten, it is not possible to retrieve it. It is recommended that you back up the wallet file after registration and keep it in a safe place. \n※ Wallet mode is recommended.";
+"kLoginRegTipsAccountMode" = "Tip: The password format can be viewed by clicking on the question mark. \nNote: X4trade is a decentralized blockchain application. Once the password is lost or forgotten, it will not be retrieved. Please keep it in a safe place.";
+"kLoginRegTipsWalletMode" = "Tip: The password format can be viewed by clicking on the question mark. \nNote: X4trade is a decentralized blockchain application. If the wallet file or password is lost or forgotten, it is not possible to retrieve it. It is recommended that you back up the wallet file after registration and keep it in a safe place. \n※ Wallet mode is recommended.";
 "kLoginFaucetTipsInvalidArguments" = "Invalid argument.";
 "kLoginFaucetTipsInvalidAccountFmt" = "The account format is incorrect.";
 "kLoginFaucetTipsAccountAlreadyExist" = "The account already exists.";
@@ -590,11 +590,11 @@
 "setting_language" = "Language";
 "setting_currency" = "Currency";
 "kSettingCurrencyNameCNY" = "Chinese Yuan";
-"kSettingCurrencyNameUSD" = "US Dollar";
+"kSettingCurrencyNameUSD" = "Bitcoin";
 "kSettingCurrencyNameEUR" = "Euro";
 "kSettingCurrencyNameJPY" = "Japanese Yen";
 "kSettingCurrencyNameKRW" = "Korean Won";
-"kSettingCurrencyNameBTS" = "Bitshares Core Asset";
+"kSettingCurrencyNameBTS" = "X4trade Core Asset";
 
 /* 各种VC标题栏名字 */
 "kVcTitleLogin" = "Login";
@@ -813,9 +813,9 @@
 "kLangKeyEn" = "English";
 "kLangKeyJa" = "日本語 / Japanese";
 "skip" = "Skip";
-"kAppName" = "Bitshares";
+"kAppName" = "X4trade";
 "kAccount" = "Account";
-"kAboutMainDesc" ="\nBitshares Mobile App is a decentralized exchange (DEX) product based on Bitshares graphene technology, developed from the product experience and developed with native technology comparable to the first-class centralized exchange. \n\nContact us\nWeChat: bts-pp\nE-mail: contact@btsplusplus.com\nTelegram: https://t.me/btsplusplus\nWebsite: https://btspp.io\n";
+"kAboutMainDesc" ="\nX4trade Mobile App is a decentralized exchange (DEX) product based on X4trade graphene technology, developed from the product experience and developed with native technology comparable to the first-class centralized exchange. \n\nContact us\nWeChat: glibx\nE-mail: info@glibx.com\nTelegram: https://t.me/glibx\nWebsite: https://glibx.com\n";
 "kAboutChannelAppStore" = "(AppStore Version & Channel %@)";
 "kAboutChannelWebsite" = "(Website Version & Channel %@)";
 "kAboutDebugVersion" = "(Debug Version)";
@@ -828,9 +828,9 @@
 "kNormalCellBtnCreateWallet" = "Create";
 "kTipsInitialize" = "Initialize…";
 "kTipsBeRequesting" = "Requesting…";
-"kTipsTxFeeNotEnough" = "Insufficient handling fee, please make sure that the account has sufficient BTS/CNY/USD to pay the network fee.";
+"kTipsTxFeeNotEnough" = "Insufficient handling fee, please make sure that the account has sufficient X4T/CNY/USD to pay the network fee.";
 "kTipsTxRequestFailed" = "The request failed. Please try again later.";
-"kSearchPlaceholderAccount" = "Please enter a valid Bitshares account";
+"kSearchPlaceholderAccount" = "Please enter a valid X4trade account";
 "kSearchPlaceholderAsset" = "Click to search for new assets";
 "kSearchTipsMyFavAccount" = "My Favorites(%@)";
 "kSearchTipsMyCustomPairs" = "My pairs(%@)";

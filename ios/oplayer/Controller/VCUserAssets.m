@@ -157,8 +157,8 @@
     
     BOOL                    _showAllAssets;
     
-    NSString*               _displayEstimateAsset;  //  记账单位 默认CNY
-    BOOL                    _needSecondExchange;    //  是否需要2次兑换，如果显示记账单位和核心评估基准资产不同则需要二次换算。即：目标资产->CNY->USD(或其他显示单位)
+    NSString*               _displayEstimateAsset;  //  记账单位 默认BTC
+    BOOL                    _needSecondExchange;    //  是否需要2次兑换，如果显示记账单位和核心评估基准资产不同则需要二次换算。即：目标资产->BTC->USD(或其他显示单位)
 }
 
 @end
@@ -289,7 +289,7 @@
             [asset_final setObject:[OrgUtils formatFloatValue:trigger_price] forKey:@"trigger_price"];
         }
         
-        //  设置优先级   1-BTS   2-智能货币（CNY等）    3-有抵押等（其实目前只有BTS可抵押，不排除以后有其他可抵押货币。） 4-其他资产
+        //  设置优先级   1-X4T   2-智能货币（BTC等）    3-有抵押等（其实目前只有BTS可抵押，不排除以后有其他可抵押货币。） 4-其他资产
         int priority = 0;
         if ([asset_type isEqualToString:chainMgr.grapheneCoreAssetID]){
             priority = 1000;
@@ -366,18 +366,18 @@
     _needSecondExchange = ![_displayEstimateAsset isEqualToString:kAppUserAssetCoreEstimateAsset];
     
     //  REMARK：
-    //  1、所有资产对CNY进行估价，因为如果其他资产直接对USD等计价可能导致没有匹配的交易对，估值误差较大。比如 SEED/CNY 有估值，SEED/JPY 等直接计较则没估值。
-    //  2、如果记账单位为USD等、则把CNY计价再转换为USD计价。
+    //  1、所有资产对BTC进行估价，因为如果其他资产直接对USD等计价可能导致没有匹配的交易对，估值误差较大。比如 SEED/BTC 有估值，SEED/JPY 等直接计较则没估值。
+    //  2、如果记账单位为USD等、则把BTC计价再转换为USD计价。
     NSMutableArray* pairs_list = [NSMutableArray array];
     for (id asset in _assetDataArray) {
         id quote = [asset objectForKey:@"name"];
-        //  记账单位资产，本身不查询。即：CNY/CNY 不查询。
+        //  记账单位资产，本身不查询。即：BTC/BTC 不查询。
         if ([quote isEqualToString:kAppUserAssetCoreEstimateAsset]){
             continue;
         }
         [pairs_list addObject:@{@"base":kAppUserAssetCoreEstimateAsset, @"quote":quote}];
     }
-    //  添加 二次兑换系数 查询 CNY到USD 的兑换系数 注意：这里以 _displayEstimateAsset 为 base 获取 ticker 数据。
+    //  添加 二次兑换系数 查询 BTC到USD 的兑换系数 注意：这里以 _displayEstimateAsset 为 base 获取 ticker 数据。
     if (_needSecondExchange){
         [pairs_list addObject:@{@"base":_displayEstimateAsset, @"quote":kAppUserAssetCoreEstimateAsset}];
     }
@@ -424,7 +424,7 @@
             long long sum_balance = [[asset objectForKey:@"balance"] longLongValue] + [[asset objectForKey:@"call_order_value"] longLongValue] + [[asset objectForKey:@"limit_order_value"] longLongValue] - [[asset objectForKey:@"debt_value"] longLongValue];
             double fPrecision = pow(10, [[asset objectForKey:@"precision"] integerValue]);
             double estimate_value = sum_balance / fPrecision;
-            //  二次兑换：CNY -> USD
+            //  二次兑换：BTC -> USD
             if (_needSecondExchange){
                 estimate_value *= fSecondExchangeRate;
             }
@@ -432,14 +432,14 @@
             [asset setObject:[OrgUtils formatFloatValue:estimate_value precision:display_precision] forKey:@"estimate_value"];
             total_estimate_value += estimate_value;
         }else{
-            //  计算资产相对于基准资产（CNY）的价值
+            //  计算资产相对于基准资产（BTC）的价值
             //{
             //  balance = 1075528;
             //  "call_order_value" = 3425318616854;
             //  id = "1.3.0";
             //  kPriority = 1000;
             //  "limit_order_value" = 0;
-            //  name = BTS;
+            //  name = X4T;
             //  precision = 5;
             //}
             //  REMARK：评估资产总和 = 可用 + 抵押 + 冻结 - 负债。
@@ -447,7 +447,7 @@
             assert(ticker);
             long long sum_balance = [[asset objectForKey:@"balance"] longLongValue] + [[asset objectForKey:@"call_order_value"] longLongValue] + [[asset objectForKey:@"limit_order_value"] longLongValue] - [[asset objectForKey:@"debt_value"] longLongValue];
             double fPrecision = pow(10, [[asset objectForKey:@"precision"] integerValue]);
-            //  当前 quote 为显示记账资产（USD），但可能不为核心兑换资产（CNY）
+            //  当前 quote 为显示记账资产（USD），但可能不为核心兑换资产（BTC）
             double estimate_value;
             if (_needSecondExchange && [quote isEqualToString:_displayEstimateAsset]){
                 estimate_value = sum_balance / fPrecision;
@@ -623,7 +623,7 @@
         }
     }
     
-    //  如果计价资产没对应的 base 市场，则获取第一个默认的 CNY 基本市场。（因为：计价资产有许多个，包括欧元等，但 base 市场只有 CNY、USD、BTS 三个而已。）
+    //  如果计价资产没对应的 base 市场，则获取第一个默认的 BTC 基本市场。（因为：计价资产有许多个，包括欧元等，但 base 市场只有 BTC、USD、X4T 三个而已。）
     if (!baseMarket){
         baseMarket = [defaultMarketInfoList firstObject];
     }
@@ -634,18 +634,18 @@
     assert(clicked_asset);
     id quote = [chainMgr getChainObjectByID:[clicked_asset objectForKey:@"id"]];
     
-    //  REMARK：如果 base 和 quote 相同则特殊处理。CNY/CNY USD/USD BTS/BTS
+    //  REMARK：如果 base 和 quote 相同则特殊处理。BTC/BTC USD/USD X4T/X4T
     id base_symbol = [base objectForKey:@"symbol"];
     id quote_symbol = [quote objectForKey:@"symbol"];
     if ([base_symbol isEqualToString:quote_symbol]){
         //  特殊处理
-        if ([quote_symbol isEqualToString:@"BTS"]){
+        if ([quote_symbol isEqualToString:@"X4T"]){
             //  修改 base
-            base_symbol = @"CNY";
+            base_symbol = @"BTC";
             base = [chainMgr getAssetBySymbol:base_symbol];
         }else{
             //  修改 quote
-            quote_symbol = @"BTS";
+            quote_symbol = @"X4T";
             quote = [chainMgr getAssetBySymbol:quote_symbol];
         }
     }

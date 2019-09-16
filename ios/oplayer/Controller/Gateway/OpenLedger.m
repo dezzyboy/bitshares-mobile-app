@@ -39,9 +39,9 @@
     //  [asset]
     //{
     //    blockchain = bitshares;
-    //    code = BTS;
-    //    "display_code" = BTS;
-    //    "display_name" = Bitshares;
+    //    code = X4T;
+    //    "display_code" = X4T;
+    //    "display_name" = X4trade;
     //    icons =     {
     //        large = "https://s2.coinmarketcap.com/static/img/coins/64x64/463.png";
     //        medium = "https://s2.coinmarketcap.com/static/img/coins/64x64/463.png";

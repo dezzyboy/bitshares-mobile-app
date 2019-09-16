@@ -269,7 +269,7 @@
 }
 
 /**
- *  (private) 初始化 Bitshares 网络
+ *  (private) 初始化 X4trade 网络
  */
 - (void)startInitGrapheneNetwork
 {
@@ -550,7 +550,7 @@
 //        return;
 //    }
 //    
-//    [[UIAlertViewManager sharedUIAlertViewManager] showMessage:@"BTS++官方版本完全免费，无代理费，无手续费，无加速包。任何收费版本皆为山寨版本，遇到山寨版本请与我们联系。"
+//    [[UIAlertViewManager sharedUIAlertViewManager] showMessage:@"X4T++官方版本完全免费，无代理费，无手续费，无加速包。任何收费版本皆为山寨版本，遇到山寨版本请与我们联系。"
 //                                                     withTitle:NSLocalizedString(@"kWarmTips", @"温馨提示")
 //                                                    completion:^(NSInteger buttonIndex)
 //    {

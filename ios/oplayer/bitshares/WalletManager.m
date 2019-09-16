@@ -1194,7 +1194,7 @@ static int _unique_nonce_entropy = -1;              //  辅助生成 unique64 �
                   @"brainkey_sequence":@0,
                   
                   @"chain_id":[ChainObjectManager sharedChainObjectManager].grapheneChainID,
-                  @"author":@"BTS++",           //  add by btspp team
+                  @"author":@"X4T++",           //  add by btspp team
                   };
     
     id final_object = @{

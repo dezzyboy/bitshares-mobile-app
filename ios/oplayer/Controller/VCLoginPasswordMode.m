@@ -108,7 +108,7 @@ enum
     CGRect rect = [self makeTextFieldRect];
     
     _tf_username = [self createTfWithRect:rect keyboard:UIKeyboardTypeDefault
-                              placeholder:NSLocalizedString(@"kLoginTipsPlaceholderAccount", @"请输入 Bitshares 帐号名")];
+                              placeholder:NSLocalizedString(@"kLoginTipsPlaceholderAccount", @"请输入 X4trade 帐号名")];
     _tf_password = [self createTfWithRect:rect keyboard:UIKeyboardTypeDefault
                               placeholder:NSLocalizedString(@"tip_placeholder_password", @"请输入密码")];
     [_tf_password setSecureTextEntry:YES];
@@ -191,7 +191,7 @@ enum
 }
 
 /**
- *  (private) 帐号模式导入 BTS 帐号。
+ *  (private) 帐号模式导入 X4T 帐号。
  */
 - (void)loginBitshares_AccountMode
 {

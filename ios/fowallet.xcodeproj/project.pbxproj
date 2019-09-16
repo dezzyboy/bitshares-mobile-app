@@ -2966,7 +2966,7 @@
 			path = bitshares/varint;
 			sourceTree = "<group>";
 		};
-		B7BDA95320B114CD00738F12 /* Bitshares */ = {
+		B7BDA95320B114CD00738F12 /* X4trade */ = {
 			isa = PBXGroup;
 			children = (
 				B77EBBF0213D1868009AC776 /* GrapheneSerializer.h */,
@@ -3005,7 +3005,7 @@
 				B7BDA95420B114DB00738F12 /* BitsharesClientManager.h */,
 				B7BDA95520B114DC00738F12 /* BitsharesClientManager.m */,
 			);
-			name = Bitshares;
+			name = X4trade;
 			sourceTree = "<group>";
 		};
 		B7BDA98F20B3A3D100738F12 /* WjCryptLib */ = {
@@ -3207,7 +3207,7 @@
 			isa = PBXGroup;
 			children = (
 				B737850A21002607001EEA8C /* Model */,
-				B7BDA95320B114CD00738F12 /* Bitshares */,
+				B7BDA95320B114CD00738F12 /* X4trade */,
 				B729E48F1C2D56B400CE3623 /* TabBarControllers */,
 				18FF068617E00B110088405E /* Controllers */,
 				18FF069017E00C5C0088405E /* View */,

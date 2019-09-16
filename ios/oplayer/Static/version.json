@@ -7,7 +7,8 @@
   "faucetURL": "",
   "wssNodes": {
     "default": [
-      "wss://node-euro-west.x4trade.org:9090"
+      "wss://node-euro-west.x4trade.org:9090",
+      ""
     ],
     "cn": [],
     "en": [],

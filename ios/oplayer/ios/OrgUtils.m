@@ -150,7 +150,7 @@ NSString* gSmallDataDecode(NSString* str, NSString* key)
                     break;
                 }
                 case AVAuthorizationStatusDenied: {
-                    reject(@"请去前往【设置>隐私>相机>BTS++】打开访问开关。");
+                    reject(@"请去前往【设置>隐私>相机>X4T++】打开访问开关。");
                     break;
                 }
                 case AVAuthorizationStatusRestricted: {
@@ -442,7 +442,7 @@ NSString* gSmallDataDecode(NSString* str, NSString* key)
 }
 
 /**
- *  解析 BTS 网络时间字符串，返回 1970 到现在的秒数。格式：2018-06-04T13:03:57。
+ *  解析 X4T 网络时间字符串，返回 1970 到现在的秒数。格式：2018-06-04T13:03:57。
  */
 + (NSTimeInterval)parseBitsharesTimeString:(NSString*)time
 {
@@ -461,7 +461,7 @@ NSString* gSmallDataDecode(NSString* str, NSString* key)
 }
 
 /**
- *  格式化时间戳为 BTS 网络时间字符串格式。格式：2018-06-04T13:03:57。
+ *  格式化时间戳为 X4T 网络时间字符串格式。格式：2018-06-04T13:03:57。
  */
 + (NSString*)formatBitsharesTimeString:(NSTimeInterval)time_secs
 {
@@ -1975,7 +1975,7 @@ NSString* gSmallDataDecode(NSString* str, NSString* key)
         validBalancesHash[[asset objectForKey:@"asset_type"]] = asset;
     }
     
-    //  d.添加必须显示的资产（BTS、有挂单没余额、有抵押没余额、有债务没余额）
+    //  d.添加必须显示的资产（X4T、有挂单没余额、有抵押没余额、有债务没余额）
     id default_asset_id = [ChainObjectManager sharedChainObjectManager].grapheneCoreAssetID;
     id core_asset = [validBalancesHash objectForKey:default_asset_id];
     //  没余额，初始化默认值。
@@ -2091,7 +2091,7 @@ NSString* gSmallDataDecode(NSString* str, NSString* key)
 }
 
 /**
- *  根据私钥种子字符串生成 BTS 地址字符串。
+ *  根据私钥种子字符串生成 X4T 地址字符串。
  */
 + (NSString*)genBtsAddressFromPrivateKeySeed:(NSString*)seed
 {
@@ -2112,7 +2112,7 @@ NSString* gSmallDataDecode(NSString* str, NSString* key)
 }
 
 /**
- *  根据 WIF格式私钥 字符串生成 BTS 地址字符串。
+ *  根据 WIF格式私钥 字符串生成 X4T 地址字符串。
  */
 + (NSString*)genBtsAddressFromWifPrivateKey:(NSString*)wif_private_key
 {

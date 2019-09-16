@@ -19,7 +19,7 @@
 //  【系统通知】网络重连成功后发送
 #define kBtsWebsocketReconnectSuccess       @"kBtsWebsocketReconnectSuccess"
 
-//  BTS 对象本地缓存过期时间
+//  X4T 对象本地缓存过期时间
 #define kBTSObjectCacheExpireTime           86400
 
 //  UI - 部分参数配置
@@ -31,7 +31,7 @@
 #define kAppUserAssetDefaultShowNum         10
 
 //  UI - 用户资产 默认估值基础计价资产
-#define kAppUserAssetCoreEstimateAsset      @"CNY"
+#define kAppUserAssetCoreEstimateAsset      @"BTC"
 
 //  [App内部目录] App自带的Static目录（里面包含version、jsapi等）
 #define kAppStaticDir                       @"Static"

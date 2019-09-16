@@ -6,7 +6,7 @@ The mobile app for [bitshares](https://how.bitshares.works/en/master/technology/
 
 ## About
 
-Bitshares Mobile App is the mobile wallet for the [Bitshares Blockchain](https://github.com/bitshares/bitshares-core). Currently features:
+X4trade Mobile App is the mobile wallet for the [X4trade Blockchain](https://github.com/bitshares/bitshares-core). Currently features:
 
 * Support account mode and wallet mode registration
 * Support wallet mode, account mode and private key mode login
@@ -49,7 +49,7 @@ Configuration Fabric
 
 ## License
 
-BitShares Mobile App is under the MIT license. See [LICENSE](https://github.com/btspp/bitshares-mobile-app/blob/master/LICENSE)
+XTtrade Mobile App is under the MIT license. See [LICENSE](https://github.com/btspp/bitshares-mobile-app/blob/master/LICENSE)
 for more information.
 
 ## Contact us

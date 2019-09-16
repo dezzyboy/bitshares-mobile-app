@@ -117,26 +117,26 @@ static SettingManager *_sharedSettingManager = nil;
 }
 
 /**
- *  获取记账单位 CNY、USD 等
+ *  获取记账单位 BTC、USD 等
  */
 - (NSString*)getEstimateAssetSymbol
 {
     NSMutableDictionary* settings = [self loadSettingHash];
     NSString* value = [settings objectForKey:kSettingKey_EstimateAssetSymbol];
     
-    //  初始化默认值（CNY）
+    //  初始化默认值（BTC）
     if (!value || [value isEqualToString:@""]){
-        [settings setObject:@"CNY" forKey:kSettingKey_EstimateAssetSymbol];
+        [settings setObject:@"BTC" forKey:kSettingKey_EstimateAssetSymbol];
         [self saveSettingHash:settings];
-        return @"CNY";
+        return @"BTC";
     }
     
     //  REMARK：如果设置界面保存的计价货币 symbol 在配置的计价列表移除了，则恢复默认值。
     id currency = [[ChainObjectManager sharedChainObjectManager] getEstimateUnitBySymbol:value];
     if (!currency){
-        [settings setObject:@"CNY" forKey:kSettingKey_EstimateAssetSymbol];
+        [settings setObject:@"BTC" forKey:kSettingKey_EstimateAssetSymbol];
         [self saveSettingHash:settings];
-        return @"CNY";
+        return @"BTC";
     }
     
     //  返回

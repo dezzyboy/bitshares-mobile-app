@@ -165,7 +165,7 @@
 "kLoginPageModeBrainKey" = "助记词";
 "kLoginPageModePrivateKey" = "私钥模式";
 "kLoginPageModeWallet" = "钱包模式";
-"kLoginTipsPlaceholderAccount" = "请输入 Bitshares 账号名";
+"kLoginTipsPlaceholderAccount" = "请输入 X4trade 账号名";
 "kLoginTipsPlaceholderBrainKey" = "请输入助记词，每个单词之间按空格分割。";
 "kLoginTipsPlaceholderTradePassword" = "请输入交易密码";
 "kLoginTipsPlaceholderActiveKey" = "请输入资金权限私钥";
@@ -815,7 +815,7 @@
 "skip" = "跳过";
 "kAppName" = "比特股";
 "kAccount" = "账号";
-"kAboutMainDesc" ="\n比特股移动端钱包是基于石墨烯技术，从产品体验出发，采用原生技术开发的一款可媲美一流中心化交易所的去中心化交易所（DEX）产品。\n\n联系我们\n微信：bts-pp\n邮箱：contact@btsplusplus.com\n电报：https://t.me/btsplusplus\n官网：https://btspp.io\n";
+"kAboutMainDesc" ="\n比特股移动端钱包是基于石墨烯技术，从产品体验出发，采用原生技术开发的一款可媲美一流中心化交易所的去中心化交易所（DEX）产品。\n\n联系我们\n微信：bts-pp\n邮箱：info@glibx.com\n电报：https://t.me/glibx\n官网：https://glibx.com\n";
 "kAboutChannelAppStore" = "(商店版 & 渠道 %@)";
 "kAboutChannelWebsite" = "(官网版 & 渠道 %@)";
 "kAboutDebugVersion" = "(调试版)";
@@ -828,9 +828,9 @@
 "kNormalCellBtnCreateWallet" = "创建钱包";
 "kTipsInitialize" = "初始化中…";
 "kTipsBeRequesting" = "请求中…";
-"kTipsTxFeeNotEnough" = "手续费不足，请确保账号有足额的 BTS/CNY/USD 用于支付网络手续费。";
+"kTipsTxFeeNotEnough" = "手续费不足，请确保账号有足额的 X4T/CNY/USD 用于支付网络手续费。";
 "kTipsTxRequestFailed" = "请求失败，请稍后再试。";
-"kSearchPlaceholderAccount" = "请输入有效的 Bitshares 账号名";
+"kSearchPlaceholderAccount" = "请输入有效的 X4trade 账号名";
 "kSearchPlaceholderAsset" = "点击搜索新资产";
 "kSearchTipsMyFavAccount" = "我的关注(%@人)";
 "kSearchTipsMyCustomPairs" = "我的交易对(%@个)";

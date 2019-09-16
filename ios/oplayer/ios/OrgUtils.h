@@ -94,12 +94,12 @@ typedef void (^YklUserCallback)(id data);
 + (BOOL)isValidHexString:(NSString*)hexstring;
 
 /**
- *  解析 BTS 网络时间字符串，返回 1970 到现在的秒数。格式：2018-06-04T13:03:57。
+ *  解析 X4T 网络时间字符串，返回 1970 到现在的秒数。格式：2018-06-04T13:03:57。
  */
 + (NSTimeInterval)parseBitsharesTimeString:(NSString*)time;
 
 /**
- *  格式化时间戳为 BTS 网络时间字符串格式。格式：2018-06-04T13:03:57。
+ *  格式化时间戳为 X4T 网络时间字符串格式。格式：2018-06-04T13:03:57。
  */
 + (NSString*)formatBitsharesTimeString:(NSTimeInterval)time_secs;
 
@@ -269,12 +269,12 @@ typedef void (^YklUserCallback)(id data);
 + (NSString*)genBtsWifPrivateKeyByPrivateKey32:(NSData*)private_key32;
 
 /**
- *  根据私钥种子字符串生成 BTS 地址字符串。
+ *  根据私钥种子字符串生成 X4T 地址字符串。
  */
 + (NSString*)genBtsAddressFromPrivateKeySeed:(NSString*)seed;
 
 /**
- *  根据 WIF格式私钥 字符串生成 BTS 地址字符串。
+ *  根据 WIF格式私钥 字符串生成 X4T 地址字符串。
  */
 + (NSString*)genBtsAddressFromWifPrivateKey:(NSString*)wif_private_key;
 

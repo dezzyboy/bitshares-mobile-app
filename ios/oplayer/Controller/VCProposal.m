@@ -845,7 +845,7 @@
     //    //  1、判断手续费是否足够。（TODO:暂时不判断）
     //    id fee_item =  [[ChainObjectManager sharedChainObjectManager] getFeeItem:ebo_proposal_update full_account_data:feePayingAccount];
     //    if (![[fee_item objectForKey:@"sufficient"] boolValue]){
-    //        [OrgUtils makeToast:NSLocalizedString(@"kTipsTxFeeNotEnough", @"手续费不足，请确保帐号有足额的 BTS/CNY/USD 用于支付网络手续费。")];
+    //        [OrgUtils makeToast:NSLocalizedString(@"kTipsTxFeeNotEnough", @"手续费不足，请确保帐号有足额的 X4T/CNY/USD 用于支付网络手续费。")];
     //        return;
     //    }
     
